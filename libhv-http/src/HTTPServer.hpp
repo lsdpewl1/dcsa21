@@ -17,6 +17,7 @@ public:
     ~HttpServer();
 
     void Start(int port);
+    /*void Delete(const std::string& path, const hv::HttpService::HttpHandler& handler)*/
 
 private:
 

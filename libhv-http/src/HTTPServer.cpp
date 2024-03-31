@@ -15,6 +15,10 @@ void HttpServer::Start(int port)
     _server->setThreadNum(std::thread::hardware_concurrency());
     _server->run();
 }
+/*
+void HttpServer::Delete(const std::string& path, const hv::HttpServer::HttpHandler& handler) {
+    _server->del(path, handler);
+}*/
 
 HttpServer::~HttpServer()
 {
