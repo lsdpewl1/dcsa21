@@ -6,344 +6,185 @@
 
 #include <map>
 
+#include <mutex>
 
- 
-/*
-void route::RegisterResources(hv::HttpService &router)
+using namespace std;
 
-{
 
-    router.GET("/hello", [](HttpRequest *req, HttpResponse *resp)
 
-    {
+class Client {
+    public:
+        int id;
+        string client;
+        string data;
 
-        nlohmann::json response
 
-        {
+    // Client(int id_cl, string name, string info)
+    // {
+    //     id=id_cl;
+    //     client = name;
+    //     data = info;
+    // }
+};
 
-            {"msg", "Hello world"}
-
-        };
-
-
- 
-
-        resp->SetBody(response.dump());
-
-        resp->content_type = APPLICATION_JSON;
-
-
- 
-
-        return 200;
-
-    });
-
-
- 
-
-    router.POST("/hello", [](HttpRequest *req, HttpResponse *resp)
-
-    {
-
-        nlohmann::json request;
-
-        nlohmann::json response;
-
-
- 
-
-        try
-
-        {
-
-            request = nlohmann::json::parse(req->body);
-
-        }
-
-        catch(const std::exception& e)
-
-        {
-
-            response["error"] = "Invalid JSON";
-
-            resp->SetBody(response.dump());
-
-            resp->content_type = APPLICATION_JSON;
-
-            return 400;
-
-        }
-
-       
-
-        resp->SetBody(request.dump());
-
-        resp->content_type = APPLICATION_JSON;
-
-
- 
-
-        return 200;
-
-    });
-
-
- 
-
-}
-
-*/
- 
-
-// Для хранения данных пользователей
-
-std::map<int, nlohmann::json> users;
-
-
- /*
-
-HttpServer::HttpServer()
-
-{
-
-    _server = std::make_unique<hv::HttpServer>();
-
-    route::RegisterResources(_router);
-
-    _server->registerHttpService(&_router);
-
-}*/
-
-
- 
-/*
-void HttpServer::Start(int port)
-
-{
-
-    _server->setPort(port);
-
-    _server->setThreadNum(std::thread::hardware_concurrency());
-
-    _server->run();
-
-}
-*/
-
- 
-/*
-HttpServer::~HttpServer()
-
-{
-
-    _server->stop();
-
-}
-*/
-
- 
+int id=0;
+std::map<int, Client> Clients;
+mutex mtx;
 
 void route::RegisterResources(hv::HttpService &router)
-
 {
-
-
     router.POST("/user", [](HttpRequest *req, HttpResponse *resp)
 
     {
-
         nlohmann::json request;
-
         nlohmann::json response;
 
-
- 
+        unique_lock<mutex> lock(mtx);
 
         try
-
         {
-
             request = nlohmann::json::parse(req->body);
 
-            int id = users.size(); // Просто присваиваем ID на основе размера map
+            if(request.contains("client")&&request.contains("data")){
+                Client client;
+                
+                 client.id = id;
+                 client.client =  request["client"].get<string>();
+                 client.data = request["data"].get<string>();
+                Clients[id++] = client;
+            }
+            else{
+                throw exception();
+            }
 
-            users[id] = request; // Добавляем пользователя в map
-
-            response["msg"] = "User added successfully";
-
-            response["id"] = id;
-
+            //int id = users.size(); // присваиваем ID на основе размера map
+            //users[id] = request; // Добавляем пользователя в map
+            response["msg"] = "Client added successfully";
+            //response["id"] = id;
         }
 
         catch(const std::exception& e)
-
         {
-
             response["error"] = "Invalid JSON";
-
             resp->SetBody(response.dump());
-
             resp->content_type = APPLICATION_JSON;
-
             return 400;
-
         }
-
-
- 
-
         resp->SetBody(response.dump());
-
         resp->content_type = APPLICATION_JSON;
-
-
- 
-
         return 200;
 
     });
-
-
- 
-
     router.GET("/user/{userId}",[](HttpRequest *req, HttpResponse *resp)
-
     {
-
         nlohmann::json response;
 
-        int userId = std::stoi(req->GetParam("userId"));
+        unique_lock<mutex> lock(mtx);
 
+        try{
+            int userId = std::stoi(req->GetParam("userId"));
 
- 
+            if (Clients.find(userId) != Clients.end())
+            {
+                response["id"] = Clients[userId].id;
+                response["client"] = Clients[userId].client;
+                response["data"] = Clients[userId].data;
+            }
 
-        if (users.find(userId) != users.end())
-
-        {
-
-            response = users[userId];
-
+            else
+            {
+                response["error"] = "Client not found";
+                resp->SetBody(response.dump());
+                resp->content_type = APPLICATION_JSON;
+                return 404;
+            }
         }
-
-        else
-
-        {
-
-            response["error"] = "User not found";
-
-            resp->SetBody(response.dump());
-
-            resp->content_type = APPLICATION_JSON;
-
-            return 404;
-
+        catch(const exception &e){
+            response["error"] = "Invalid data";
+                resp->SetBody(response.dump());
+                resp->content_type = APPLICATION_JSON;
+                return 400;
         }
-
-
- 
+        
+        
 
         resp->SetBody(response.dump());
-
         resp->content_type = APPLICATION_JSON;
-
-
- 
-
         return 200;
 
     });
-
-
- 
 
     router.GET("/users",[](HttpRequest *req, HttpResponse *resp)
-
     {
-
-        nlohmann::json response = nlohmann::json::array();
-
-
- 
-
-        for (auto &user : users)
-
-        {
-
-            nlohmann::json userJson;
-
-            userJson["id"] = user.first;
-
-            userJson["data"] = user.second;
-
-            response.push_back(userJson);
-
-        }
-
-
- 
-
-        resp->SetBody(response.dump());
-
-        resp->content_type = APPLICATION_JSON;
-
-
- 
-
-        return 200;
-
-    });
-
-
- 
-
-    router.Delete("/user/{userId}", [](HttpRequest *req, HttpResponse *resp)
-
-    {
-
         nlohmann::json response;
 
-        int userId = std::stoi(req->GetParam("userId"));
+        unique_lock<mutex> lock(mtx);
 
-
- 
-
-        if (users.find(userId) != users.end())
-
-        {
-
-            users.erase(userId);
-
-            response["msg"] = "User deleted successfully";
-
+        try{
+            if(Clients.empty()){
+                nlohmann::json userJson;
+                userJson["data"] = "";
+                response.push_back(userJson);
+            }
+            else{
+                        for (auto &user : Clients)
+                {
+                    nlohmann::json userJson;
+                    userJson["id"] = user.second.id;
+                    userJson["client"] = user.second.client;
+                    userJson["data"] = user.second.data;
+                    response.push_back(userJson);
+                }
+            }
+        }
+        catch(const exception& e){
+            response["error"] = "Invalid data";
+                resp->SetBody(response.dump());
+                resp->content_type = APPLICATION_JSON;
+                return 400;
         }
 
-        else
+        
+        resp->SetBody(response.dump());
+        resp->content_type = APPLICATION_JSON;
+        return 200;
+    });
 
-        {
+    router.Delete("/user/{userId}", [](HttpRequest *req, HttpResponse *resp)
+    {
+        nlohmann::json response;
+        
+        unique_lock<mutex> lock(mtx);
 
-            response["error"] = "User not found";
+        try{
+            int userId = std::stoi(req->GetParam("userId"));
 
-            resp->SetBody(response.dump());
+                    if (Clients.find(userId) != Clients.end())
+                    {
+                        Clients.erase(userId);
+                        response["msg"] = "Client deleted successfully";
+                    }
 
-            resp->content_type = APPLICATION_JSON;
-
-            return 404;
-
+                    else
+                    {
+                        response["error"] = "Client not found";
+                        resp->SetBody(response.dump());
+                        resp->content_type = APPLICATION_JSON;
+                        return 404;
+                    }
+        }
+        catch(const exception& e){
+            response["error"] = "Invalid data";
+                resp->SetBody(response.dump());
+                resp->content_type = APPLICATION_JSON;
+                return 400;
         }
 
-
- 
+        
 
         resp->SetBody(response.dump());
-
         resp->content_type = APPLICATION_JSON;
-
-
- 
-
         return 200;
 
     });
-
 }
