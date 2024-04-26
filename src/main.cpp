@@ -1,5 +1,4 @@
 #include "HTTPServer.hpp"
-#include <curl/curl.h>
 #include <requests.h>
 #include "./Utility/Utility.hpp"
 
