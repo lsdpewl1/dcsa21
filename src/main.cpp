@@ -4,49 +4,6 @@
 
 using namespace std;
 
-size_t WriteCallback(void* contents, size_t size, size_t nmemb, std::string* userp) {
-    userp->append((char*)contents, size * nmemb);
-    return size * nmemb;
-}
-
-
-void sendRequest(const std::string& url, const std::string& method, const std::string& data = "") {
-    CURL* curl;
-    CURLcode res;
-    std::string readBuffer;
-
-
-    curl_global_init(CURL_GLOBAL_DEFAULT);
-    curl = curl_easy_init();
-    if(curl) {
-        curl_easy_setopt(curl, CURLOPT_URL, url.c_str());
-        curl_easy_setopt(curl, CURLOPT_WRITEFUNCTION, WriteCallback);
-        curl_easy_setopt(curl, CURLOPT_WRITEDATA, &readBuffer);
-
-
-        if (method == "POST") {
-            curl_easy_setopt(curl, CURLOPT_POSTFIELDS, data.c_str());
-        } else if (method == "PUT") {
-            curl_easy_setopt(curl, CURLOPT_CUSTOMREQUEST, "PUT");
-            curl_easy_setopt(curl, CURLOPT_POSTFIELDS, data.c_str());
-        } else if (method == "DELETE") {
-            curl_easy_setopt(curl, CURLOPT_CUSTOMREQUEST, "DELETE");
-        }
-
-
-        res = curl_easy_perform(curl);
-
-
-        if(res != CURLE_OK)
-            fprintf(stderr, "curl_easy_perform() failed: %s\n", curl_easy_strerror(res));
-
-
-        std::cout << readBuffer << std::endl;
-        curl_easy_cleanup(curl);
-    }
-    curl_global_cleanup();
-}
-
 void add(){
     http_headers head;
         std::string name;
