@@ -9,7 +9,7 @@ jobs:
         uses: actions/checkout@v3
       - run: sudo apt-get update
       - run: sudo apt-get install g++ make cmake
-      - run: cd libhv-http
+      - run: cd /home/runner/work/avt114-labs-team-1/avt114-labs-team-1/libhv-http
       - run: pwd
       - run: ls -al
       
