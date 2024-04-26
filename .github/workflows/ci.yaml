@@ -7,7 +7,7 @@ jobs:
     steps:
       - name: Check out repository code
         uses: actions/checkout@v3
-        working-directory: ./home/runner/work/avt114-labs-team-1/avt114-labs-team-1/libhv-http
+        working-directory: ./libhv-http
       - run: sudo apt-get update
       - run: sudo apt-get install g++ make cmake
       - run: cd /home/runner/work/avt114-labs-team-1/avt114-labs-team-1/libhv-http
