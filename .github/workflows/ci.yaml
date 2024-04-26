@@ -10,10 +10,7 @@ jobs:
         
       - run: sudo apt-get update
       - run: sudo apt-get install g++ make cmake
-      - run: cd /home/runner/work/avt114-labs-team-1/avt114-labs-team-1/libhv-http
-      - run: pwd
-      - run: ls -al     
-
+      - run: cd ./libhv-http
       - run: pwd
       - run: ls -al  
       - run: mkdir -p build && cd build && cmake .. && make
