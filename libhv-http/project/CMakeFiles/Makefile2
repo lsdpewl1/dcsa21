@@ -63,7 +63,7 @@ CMAKE_BINARY_DIR = /home/vboxuser1/DCSA/libhv-http/project
 # Directory level rules for the build root directory
 
 # The main recursive "all" target.
-all: CMakeFiles/libhv-http.dir/all
+all: CMakeFiles/http-server.dir/all
 all: contrib/all
 .PHONY : all
 
@@ -72,7 +72,7 @@ preinstall: contrib/preinstall
 .PHONY : preinstall
 
 # The main recursive "clean" target.
-clean: CMakeFiles/libhv-http.dir/clean
+clean: CMakeFiles/http-server.dir/clean
 clean: contrib/clean
 .PHONY : clean
 
@@ -123,30 +123,30 @@ contrib/libhv-cmake/clean: contrib/libhv/clean
 .PHONY : contrib/libhv-cmake/clean
 
 #=============================================================================
-# Target rules for target CMakeFiles/libhv-http.dir
+# Target rules for target CMakeFiles/http-server.dir
 
 # All Build rule for target.
-CMakeFiles/libhv-http.dir/all: contrib/libhv/CMakeFiles/hv_static.dir/all
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/libhv-http.dir/build.make CMakeFiles/libhv-http.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/libhv-http.dir/build.make CMakeFiles/libhv-http.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/vboxuser1/DCSA/libhv-http/project/CMakeFiles --progress-num=65,66,67,68 "Built target libhv-http"
-.PHONY : CMakeFiles/libhv-http.dir/all
+CMakeFiles/http-server.dir/all: contrib/libhv/CMakeFiles/hv_static.dir/all
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/http-server.dir/build.make CMakeFiles/http-server.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/http-server.dir/build.make CMakeFiles/http-server.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/vboxuser1/DCSA/libhv-http/project/CMakeFiles --progress-num=1,2,3,4,5 "Built target http-server"
+.PHONY : CMakeFiles/http-server.dir/all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/libhv-http.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/vboxuser1/DCSA/libhv-http/project/CMakeFiles 68
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/libhv-http.dir/all
+CMakeFiles/http-server.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/vboxuser1/DCSA/libhv-http/project/CMakeFiles 69
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/http-server.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/vboxuser1/DCSA/libhv-http/project/CMakeFiles 0
-.PHONY : CMakeFiles/libhv-http.dir/rule
+.PHONY : CMakeFiles/http-server.dir/rule
 
 # Convenience name for target.
-libhv-http: CMakeFiles/libhv-http.dir/rule
-.PHONY : libhv-http
+http-server: CMakeFiles/http-server.dir/rule
+.PHONY : http-server
 
 # clean rule for target.
-CMakeFiles/libhv-http.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/libhv-http.dir/build.make CMakeFiles/libhv-http.dir/clean
-.PHONY : CMakeFiles/libhv-http.dir/clean
+CMakeFiles/http-server.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/http-server.dir/build.make CMakeFiles/http-server.dir/clean
+.PHONY : CMakeFiles/http-server.dir/clean
 
 #=============================================================================
 # Target rules for target contrib/libhv/CMakeFiles/hv_static.dir
@@ -155,7 +155,7 @@ CMakeFiles/libhv-http.dir/clean:
 contrib/libhv/CMakeFiles/hv_static.dir/all:
 	$(MAKE) $(MAKESILENT) -f contrib/libhv/CMakeFiles/hv_static.dir/build.make contrib/libhv/CMakeFiles/hv_static.dir/depend
 	$(MAKE) $(MAKESILENT) -f contrib/libhv/CMakeFiles/hv_static.dir/build.make contrib/libhv/CMakeFiles/hv_static.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/vboxuser1/DCSA/libhv-http/project/CMakeFiles --progress-num=1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64 "Built target hv_static"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/vboxuser1/DCSA/libhv-http/project/CMakeFiles --progress-num=6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69 "Built target hv_static"
 .PHONY : contrib/libhv/CMakeFiles/hv_static.dir/all
 
 # Build rule for subdir invocation for target.

@@ -824,7 +824,10 @@ CMakeFiles/libhv-http.dir/src/Routers.cpp.o: ../src/Routers.cpp \
   /usr/include/c++/11/chrono \
   /usr/include/c++/11/ratio \
   /usr/include/c++/11/ctime \
-  /usr/include/c++/11/bits/parse_numbers.h
+  /usr/include/c++/11/bits/parse_numbers.h \
+  /usr/include/c++/11/mutex \
+  /usr/include/c++/11/bits/std_mutex.h \
+  /usr/include/c++/11/bits/unique_lock.h
 
 CMakeFiles/libhv-http.dir/src/main.cpp.o: ../src/main.cpp \
   /usr/include/stdc-predef.h \
@@ -1236,6 +1239,8 @@ CMakeFiles/libhv-http.dir/src/main.cpp.o: ../src/main.cpp \
 
 ../src/main.cpp:
 
+/usr/include/c++/11/mutex:
+
 /usr/include/c++/11/bits/parse_numbers.h:
 
 /usr/include/c++/11/ctime:
@@ -1388,6 +1393,8 @@ contrib/libhv/include/hv/hdef.h:
 
 /usr/include/c++/11/bits/stl_multimap.h:
 
+/usr/include/c++/11/bits/unique_lock.h:
+
 /usr/include/c++/11/bits/uses_allocator.h:
 
 /usr/include/x86_64-linux-gnu/c++/11/bits/error_constants.h:
@@ -1495,6 +1502,8 @@ contrib/libhv/include/hv/HttpResponseWriter.h:
 /usr/include/c++/11/cstdlib:
 
 /usr/include/c++/11/bits/stl_iterator_base_types.h:
+
+/usr/include/c++/11/bits/std_mutex.h:
 
 /usr/include/c++/11/tr1/poly_laguerre.tcc:
 

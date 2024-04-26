@@ -17,20 +17,9 @@ set(CMAKE_MAKEFILE_DEPENDS
   "CMakeFiles/3.22.1/CMakeCCompiler.cmake"
   "CMakeFiles/3.22.1/CMakeCXXCompiler.cmake"
   "CMakeFiles/3.22.1/CMakeSystem.cmake"
-  "CMakeFiles/CheckIncludeFiles/HAVE_ENDIAN_H.c"
-  "CMakeFiles/CheckIncludeFiles/HAVE_FCNTL_H.c"
-  "CMakeFiles/CheckIncludeFiles/HAVE_PTHREAD_H.c"
-  "CMakeFiles/CheckIncludeFiles/HAVE_STDATOMIC_H.c"
-  "CMakeFiles/CheckIncludeFiles/HAVE_STDBOOL_H.c"
-  "CMakeFiles/CheckIncludeFiles/HAVE_STDINT_H.c"
-  "CMakeFiles/CheckIncludeFiles/HAVE_SYS_ENDIAN_H.c"
-  "CMakeFiles/CheckIncludeFiles/HAVE_SYS_STAT_H.c"
-  "CMakeFiles/CheckIncludeFiles/HAVE_SYS_TIME_H.c"
-  "CMakeFiles/CheckIncludeFiles/HAVE_SYS_TYPES_H.c"
   "/usr/share/cmake-3.22/Modules/CMakeCInformation.cmake"
   "/usr/share/cmake-3.22/Modules/CMakeCXXInformation.cmake"
   "/usr/share/cmake-3.22/Modules/CMakeCommonLanguageInclude.cmake"
-  "/usr/share/cmake-3.22/Modules/CMakeConfigurableFile.in"
   "/usr/share/cmake-3.22/Modules/CMakeGenericSystem.cmake"
   "/usr/share/cmake-3.22/Modules/CMakeInitializeConfigs.cmake"
   "/usr/share/cmake-3.22/Modules/CMakeLanguageInformation.cmake"
@@ -42,7 +31,7 @@ set(CMAKE_MAKEFILE_DEPENDS
   "/usr/share/cmake-3.22/Modules/Compiler/GNU-C.cmake"
   "/usr/share/cmake-3.22/Modules/Compiler/GNU-CXX.cmake"
   "/usr/share/cmake-3.22/Modules/Compiler/GNU.cmake"
-  "/usr/share/cmake-3.22/Modules/FindOpenSSL.cmake"
+  "/usr/share/cmake-3.22/Modules/FindCURL.cmake"
   "/usr/share/cmake-3.22/Modules/FindPackageHandleStandardArgs.cmake"
   "/usr/share/cmake-3.22/Modules/FindPackageMessage.cmake"
   "/usr/share/cmake-3.22/Modules/FindPkgConfig.cmake"
@@ -51,6 +40,7 @@ set(CMAKE_MAKEFILE_DEPENDS
   "/usr/share/cmake-3.22/Modules/Platform/Linux-GNU.cmake"
   "/usr/share/cmake-3.22/Modules/Platform/Linux.cmake"
   "/usr/share/cmake-3.22/Modules/Platform/UnixPaths.cmake"
+  "/usr/share/cmake-3.22/Modules/SelectLibraryConfigurations.cmake"
   )
 
 # The corresponding makefile is:
@@ -64,23 +54,13 @@ set(CMAKE_MAKEFILE_PRODUCTS
   "CMakeFiles/CMakeDirectoryInformation.cmake"
   "contrib/CMakeFiles/CMakeDirectoryInformation.cmake"
   "contrib/libhv-cmake/CMakeFiles/CMakeDirectoryInformation.cmake"
-  "CMakeFiles/CheckIncludeFiles/HAVE_STDBOOL_H.c"
-  "CMakeFiles/CheckIncludeFiles/HAVE_STDINT_H.c"
-  "CMakeFiles/CheckIncludeFiles/HAVE_STDATOMIC_H.c"
-  "CMakeFiles/CheckIncludeFiles/HAVE_SYS_TYPES_H.c"
-  "CMakeFiles/CheckIncludeFiles/HAVE_SYS_STAT_H.c"
-  "CMakeFiles/CheckIncludeFiles/HAVE_SYS_TIME_H.c"
-  "CMakeFiles/CheckIncludeFiles/HAVE_FCNTL_H.c"
-  "CMakeFiles/CheckIncludeFiles/HAVE_PTHREAD_H.c"
-  "CMakeFiles/CheckIncludeFiles/HAVE_ENDIAN_H.c"
-  "CMakeFiles/CheckIncludeFiles/HAVE_SYS_ENDIAN_H.c"
   "../contrib/libhv/hconfig.h"
   "contrib/libhv/CMakeFiles/CMakeDirectoryInformation.cmake"
   )
 
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
-  "CMakeFiles/libhv-http.dir/DependInfo.cmake"
+  "CMakeFiles/http-server.dir/DependInfo.cmake"
   "contrib/libhv/CMakeFiles/hv_static.dir/DependInfo.cmake"
   "contrib/libhv/CMakeFiles/libhv_static.dir/DependInfo.cmake"
   )

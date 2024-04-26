@@ -162,17 +162,17 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named libhv-http
+# Target rules for targets named http-server
 
 # Build rule for target.
-libhv-http: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 libhv-http
-.PHONY : libhv-http
+http-server: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 http-server
+.PHONY : http-server
 
 # fast build rule for target.
-libhv-http/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/libhv-http.dir/build.make CMakeFiles/libhv-http.dir/build
-.PHONY : libhv-http/fast
+http-server/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/http-server.dir/build.make CMakeFiles/http-server.dir/build
+.PHONY : http-server/fast
 
 #=============================================================================
 # Target rules for targets named hv_static
@@ -205,7 +205,7 @@ src/HTTPServer.o: src/HTTPServer.cpp.o
 
 # target to build an object file
 src/HTTPServer.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/libhv-http.dir/build.make CMakeFiles/libhv-http.dir/src/HTTPServer.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/http-server.dir/build.make CMakeFiles/http-server.dir/src/HTTPServer.cpp.o
 .PHONY : src/HTTPServer.cpp.o
 
 src/HTTPServer.i: src/HTTPServer.cpp.i
@@ -213,7 +213,7 @@ src/HTTPServer.i: src/HTTPServer.cpp.i
 
 # target to preprocess a source file
 src/HTTPServer.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/libhv-http.dir/build.make CMakeFiles/libhv-http.dir/src/HTTPServer.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/http-server.dir/build.make CMakeFiles/http-server.dir/src/HTTPServer.cpp.i
 .PHONY : src/HTTPServer.cpp.i
 
 src/HTTPServer.s: src/HTTPServer.cpp.s
@@ -221,7 +221,7 @@ src/HTTPServer.s: src/HTTPServer.cpp.s
 
 # target to generate assembly for a file
 src/HTTPServer.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/libhv-http.dir/build.make CMakeFiles/libhv-http.dir/src/HTTPServer.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/http-server.dir/build.make CMakeFiles/http-server.dir/src/HTTPServer.cpp.s
 .PHONY : src/HTTPServer.cpp.s
 
 src/Routers.o: src/Routers.cpp.o
@@ -229,7 +229,7 @@ src/Routers.o: src/Routers.cpp.o
 
 # target to build an object file
 src/Routers.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/libhv-http.dir/build.make CMakeFiles/libhv-http.dir/src/Routers.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/http-server.dir/build.make CMakeFiles/http-server.dir/src/Routers.cpp.o
 .PHONY : src/Routers.cpp.o
 
 src/Routers.i: src/Routers.cpp.i
@@ -237,7 +237,7 @@ src/Routers.i: src/Routers.cpp.i
 
 # target to preprocess a source file
 src/Routers.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/libhv-http.dir/build.make CMakeFiles/libhv-http.dir/src/Routers.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/http-server.dir/build.make CMakeFiles/http-server.dir/src/Routers.cpp.i
 .PHONY : src/Routers.cpp.i
 
 src/Routers.s: src/Routers.cpp.s
@@ -245,15 +245,39 @@ src/Routers.s: src/Routers.cpp.s
 
 # target to generate assembly for a file
 src/Routers.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/libhv-http.dir/build.make CMakeFiles/libhv-http.dir/src/Routers.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/http-server.dir/build.make CMakeFiles/http-server.dir/src/Routers.cpp.s
 .PHONY : src/Routers.cpp.s
+
+src/Utility/Utility.o: src/Utility/Utility.cpp.o
+.PHONY : src/Utility/Utility.o
+
+# target to build an object file
+src/Utility/Utility.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/http-server.dir/build.make CMakeFiles/http-server.dir/src/Utility/Utility.cpp.o
+.PHONY : src/Utility/Utility.cpp.o
+
+src/Utility/Utility.i: src/Utility/Utility.cpp.i
+.PHONY : src/Utility/Utility.i
+
+# target to preprocess a source file
+src/Utility/Utility.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/http-server.dir/build.make CMakeFiles/http-server.dir/src/Utility/Utility.cpp.i
+.PHONY : src/Utility/Utility.cpp.i
+
+src/Utility/Utility.s: src/Utility/Utility.cpp.s
+.PHONY : src/Utility/Utility.s
+
+# target to generate assembly for a file
+src/Utility/Utility.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/http-server.dir/build.make CMakeFiles/http-server.dir/src/Utility/Utility.cpp.s
+.PHONY : src/Utility/Utility.cpp.s
 
 src/main.o: src/main.cpp.o
 .PHONY : src/main.o
 
 # target to build an object file
 src/main.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/libhv-http.dir/build.make CMakeFiles/libhv-http.dir/src/main.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/http-server.dir/build.make CMakeFiles/http-server.dir/src/main.cpp.o
 .PHONY : src/main.cpp.o
 
 src/main.i: src/main.cpp.i
@@ -261,7 +285,7 @@ src/main.i: src/main.cpp.i
 
 # target to preprocess a source file
 src/main.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/libhv-http.dir/build.make CMakeFiles/libhv-http.dir/src/main.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/http-server.dir/build.make CMakeFiles/http-server.dir/src/main.cpp.i
 .PHONY : src/main.cpp.i
 
 src/main.s: src/main.cpp.s
@@ -269,7 +293,7 @@ src/main.s: src/main.cpp.s
 
 # target to generate assembly for a file
 src/main.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/libhv-http.dir/build.make CMakeFiles/libhv-http.dir/src/main.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/http-server.dir/build.make CMakeFiles/http-server.dir/src/main.cpp.s
 .PHONY : src/main.cpp.s
 
 # Help Target
@@ -285,14 +309,17 @@ help:
 	@echo "... list_install_components"
 	@echo "... rebuild_cache"
 	@echo "... libhv_static"
+	@echo "... http-server"
 	@echo "... hv_static"
-	@echo "... libhv-http"
 	@echo "... src/HTTPServer.o"
 	@echo "... src/HTTPServer.i"
 	@echo "... src/HTTPServer.s"
 	@echo "... src/Routers.o"
 	@echo "... src/Routers.i"
 	@echo "... src/Routers.s"
+	@echo "... src/Utility/Utility.o"
+	@echo "... src/Utility/Utility.i"
+	@echo "... src/Utility/Utility.s"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"
