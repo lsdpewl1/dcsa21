@@ -28,7 +28,3 @@ include_directories(${LIBHV_INCLUDE})
     
 add_executable(${TARGET_NAME} ${SOURCES})
 target_link_libraries(${TARGET_NAME} hv_static)
-
-find_package(CURL REQUIRED)
-include_directories(${CURL_INCLUDE_DIR})
-target_link_libraries(http-server ${CURL_LIBRARIES})
