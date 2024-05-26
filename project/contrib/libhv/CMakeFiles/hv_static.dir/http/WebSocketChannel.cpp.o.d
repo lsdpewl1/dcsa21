@@ -1,7 +1,7 @@
 contrib/libhv/CMakeFiles/hv_static.dir/http/WebSocketChannel.cpp.o: \
- /home/vboxuser1/DCSA/libhv-http/contrib/libhv/http/WebSocketChannel.cpp \
+ /home/vboxuser1/DCSA/contrib/libhv/http/WebSocketChannel.cpp \
  /usr/include/stdc-predef.h \
- /home/vboxuser1/DCSA/libhv-http/contrib/libhv/http/WebSocketChannel.h \
+ /home/vboxuser1/DCSA/contrib/libhv/http/WebSocketChannel.h \
  /usr/include/c++/11/mutex /usr/include/c++/11/tuple \
  /usr/include/c++/11/utility \
  /usr/include/x86_64-linux-gnu/c++/11/bits/c++config.h \
@@ -139,7 +139,7 @@ contrib/libhv/CMakeFiles/hv_static.dir/http/WebSocketChannel.cpp.o: \
  /usr/include/c++/11/bits/basic_string.tcc \
  /usr/include/c++/11/bits/std_mutex.h \
  /usr/include/c++/11/bits/unique_lock.h \
- /home/vboxuser1/DCSA/libhv-http/contrib/libhv/evpp/Channel.h \
+ /home/vboxuser1/DCSA/contrib/libhv/evpp/Channel.h \
  /usr/include/c++/11/functional /usr/include/c++/11/bits/refwrap.h \
  /usr/include/c++/11/bits/std_function.h /usr/include/c++/11/memory \
  /usr/include/c++/11/bits/stl_uninitialized.h \
@@ -156,11 +156,11 @@ contrib/libhv/CMakeFiles/hv_static.dir/http/WebSocketChannel.cpp.o: \
  /usr/include/c++/11/bits/atomic_base.h \
  /usr/include/c++/11/bits/atomic_lockfree_defines.h \
  /usr/include/c++/11/backward/auto_ptr.h \
- /home/vboxuser1/DCSA/libhv-http/contrib/libhv/event/hloop.h \
- /home/vboxuser1/DCSA/libhv-http/contrib/libhv/./hexport.h \
- /home/vboxuser1/DCSA/libhv-http/contrib/libhv/base/hplatform.h \
- /home/vboxuser1/DCSA/libhv-http/contrib/libhv/./hconfig.h \
- /usr/include/unistd.h /usr/include/x86_64-linux-gnu/bits/posix_opt.h \
+ /home/vboxuser1/DCSA/contrib/libhv/event/hloop.h \
+ /home/vboxuser1/DCSA/contrib/libhv/./hexport.h \
+ /home/vboxuser1/DCSA/contrib/libhv/base/hplatform.h \
+ /home/vboxuser1/DCSA/contrib/libhv/./hconfig.h /usr/include/unistd.h \
+ /usr/include/x86_64-linux-gnu/bits/posix_opt.h \
  /usr/include/x86_64-linux-gnu/bits/environments.h \
  /usr/include/x86_64-linux-gnu/bits/confname.h \
  /usr/include/x86_64-linux-gnu/bits/getopt_posix.h \
@@ -243,14 +243,14 @@ contrib/libhv/CMakeFiles/hv_static.dir/http/WebSocketChannel.cpp.o: \
  /usr/include/x86_64-linux-gnu/bits/fcntl.h \
  /usr/include/x86_64-linux-gnu/bits/fcntl-linux.h \
  /usr/include/linux/falloc.h \
- /home/vboxuser1/DCSA/libhv-http/contrib/libhv/base/hdef.h \
- /home/vboxuser1/DCSA/libhv-http/contrib/libhv/base/hplatform.h \
- /home/vboxuser1/DCSA/libhv-http/contrib/libhv/ssl/hssl.h \
- /home/vboxuser1/DCSA/libhv-http/contrib/libhv/base/hsocket.h \
- /home/vboxuser1/DCSA/libhv-http/contrib/libhv/evpp/Buffer.h \
- /home/vboxuser1/DCSA/libhv-http/contrib/libhv/base/hbuf.h \
- /home/vboxuser1/DCSA/libhv-http/contrib/libhv/base/hdef.h \
- /home/vboxuser1/DCSA/libhv-http/contrib/libhv/base/hbase.h \
- /home/vboxuser1/DCSA/libhv-http/contrib/libhv/http/wsdef.h \
+ /home/vboxuser1/DCSA/contrib/libhv/base/hdef.h \
+ /home/vboxuser1/DCSA/contrib/libhv/base/hplatform.h \
+ /home/vboxuser1/DCSA/contrib/libhv/ssl/hssl.h \
+ /home/vboxuser1/DCSA/contrib/libhv/base/hsocket.h \
+ /home/vboxuser1/DCSA/contrib/libhv/evpp/Buffer.h \
+ /home/vboxuser1/DCSA/contrib/libhv/base/hbuf.h \
+ /home/vboxuser1/DCSA/contrib/libhv/base/hdef.h \
+ /home/vboxuser1/DCSA/contrib/libhv/base/hbase.h \
+ /home/vboxuser1/DCSA/contrib/libhv/http/wsdef.h \
  /usr/lib/gcc/x86_64-linux-gnu/11/include/stdbool.h \
- /home/vboxuser1/DCSA/libhv-http/contrib/libhv/base/hmath.h
+ /home/vboxuser1/DCSA/contrib/libhv/base/hmath.h

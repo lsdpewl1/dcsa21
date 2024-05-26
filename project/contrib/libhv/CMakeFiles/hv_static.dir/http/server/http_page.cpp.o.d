@@ -1,7 +1,7 @@
 contrib/libhv/CMakeFiles/hv_static.dir/http/server/http_page.cpp.o: \
- /home/vboxuser1/DCSA/libhv-http/contrib/libhv/http/server/http_page.cpp \
+ /home/vboxuser1/DCSA/contrib/libhv/http/server/http_page.cpp \
  /usr/include/stdc-predef.h \
- /home/vboxuser1/DCSA/libhv-http/contrib/libhv/http/server/http_page.h \
+ /home/vboxuser1/DCSA/contrib/libhv/http/server/http_page.h \
  /usr/include/c++/11/string \
  /usr/include/x86_64-linux-gnu/c++/11/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/11/bits/os_defines.h \
@@ -128,12 +128,12 @@ contrib/libhv/CMakeFiles/hv_static.dir/http/server/http_page.cpp.o: \
  /usr/include/c++/11/bits/functional_hash.h \
  /usr/include/c++/11/bits/hash_bytes.h \
  /usr/include/c++/11/bits/basic_string.tcc \
- /home/vboxuser1/DCSA/libhv-http/contrib/libhv/http/httpdef.h \
- /home/vboxuser1/DCSA/libhv-http/contrib/libhv/./hexport.h \
- /home/vboxuser1/DCSA/libhv-http/contrib/libhv/cpputil/hdir.h \
- /usr/include/string.h /usr/include/strings.h /usr/include/c++/11/list \
+ /home/vboxuser1/DCSA/contrib/libhv/http/httpdef.h \
+ /home/vboxuser1/DCSA/contrib/libhv/./hexport.h \
+ /home/vboxuser1/DCSA/contrib/libhv/cpputil/hdir.h /usr/include/string.h \
+ /usr/include/strings.h /usr/include/c++/11/list \
  /usr/include/c++/11/bits/stl_list.h \
  /usr/include/c++/11/bits/allocated_ptr.h \
  /usr/include/c++/11/ext/aligned_buffer.h \
  /usr/include/c++/11/bits/list.tcc \
- /home/vboxuser1/DCSA/libhv-http/contrib/libhv/cpputil/hurl.h
+ /home/vboxuser1/DCSA/contrib/libhv/cpputil/hurl.h

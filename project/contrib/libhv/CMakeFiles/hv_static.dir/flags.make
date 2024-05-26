@@ -5,13 +5,13 @@
 # compile CXX with /usr/bin/c++
 C_DEFINES = -DHV_STATICLIB -DNDEBUG
 
-C_INCLUDES = -I/home/vboxuser1/DCSA/libhv-http/contrib/libhv/. -I/home/vboxuser1/DCSA/libhv-http/contrib/libhv/include -I/home/vboxuser1/DCSA/libhv-http/contrib/libhv/3rd/include -I/home/vboxuser1/DCSA/libhv-http/contrib/libhv/src -I/home/vboxuser1/DCSA/libhv-http/contrib/libhv/base -I/home/vboxuser1/DCSA/libhv-http/contrib/libhv/ssl -I/home/vboxuser1/DCSA/libhv-http/contrib/libhv/event -I/home/vboxuser1/DCSA/libhv-http/contrib/libhv/util -I/home/vboxuser1/DCSA/libhv-http/contrib/libhv/cpputil -I/home/vboxuser1/DCSA/libhv-http/contrib/libhv/evpp -I/home/vboxuser1/DCSA/libhv-http/contrib/libhv/http -I/home/vboxuser1/DCSA/libhv-http/contrib/libhv/http/server -I/home/vboxuser1/DCSA/libhv-http/contrib/libhv/http/client
+C_INCLUDES = -I/home/vboxuser1/DCSA/contrib/libhv/. -I/home/vboxuser1/DCSA/contrib/libhv/include -I/home/vboxuser1/DCSA/contrib/libhv/3rd/include -I/home/vboxuser1/DCSA/contrib/libhv/src -I/home/vboxuser1/DCSA/contrib/libhv/base -I/home/vboxuser1/DCSA/contrib/libhv/ssl -I/home/vboxuser1/DCSA/contrib/libhv/event -I/home/vboxuser1/DCSA/contrib/libhv/util -I/home/vboxuser1/DCSA/contrib/libhv/cpputil -I/home/vboxuser1/DCSA/contrib/libhv/evpp -I/home/vboxuser1/DCSA/contrib/libhv/http -I/home/vboxuser1/DCSA/contrib/libhv/http/server -I/home/vboxuser1/DCSA/contrib/libhv/http/client
 
 C_FLAGS = -std=gnu99
 
 CXX_DEFINES = -DHV_STATICLIB -DNDEBUG
 
-CXX_INCLUDES = -I/home/vboxuser1/DCSA/libhv-http/contrib/libhv/. -I/home/vboxuser1/DCSA/libhv-http/contrib/libhv/include -I/home/vboxuser1/DCSA/libhv-http/contrib/libhv/3rd/include -I/home/vboxuser1/DCSA/libhv-http/contrib/libhv/src -I/home/vboxuser1/DCSA/libhv-http/contrib/libhv/base -I/home/vboxuser1/DCSA/libhv-http/contrib/libhv/ssl -I/home/vboxuser1/DCSA/libhv-http/contrib/libhv/event -I/home/vboxuser1/DCSA/libhv-http/contrib/libhv/util -I/home/vboxuser1/DCSA/libhv-http/contrib/libhv/cpputil -I/home/vboxuser1/DCSA/libhv-http/contrib/libhv/evpp -I/home/vboxuser1/DCSA/libhv-http/contrib/libhv/http -I/home/vboxuser1/DCSA/libhv-http/contrib/libhv/http/server -I/home/vboxuser1/DCSA/libhv-http/contrib/libhv/http/client
+CXX_INCLUDES = -I/home/vboxuser1/DCSA/contrib/libhv/. -I/home/vboxuser1/DCSA/contrib/libhv/include -I/home/vboxuser1/DCSA/contrib/libhv/3rd/include -I/home/vboxuser1/DCSA/contrib/libhv/src -I/home/vboxuser1/DCSA/contrib/libhv/base -I/home/vboxuser1/DCSA/contrib/libhv/ssl -I/home/vboxuser1/DCSA/contrib/libhv/event -I/home/vboxuser1/DCSA/contrib/libhv/util -I/home/vboxuser1/DCSA/contrib/libhv/cpputil -I/home/vboxuser1/DCSA/contrib/libhv/evpp -I/home/vboxuser1/DCSA/contrib/libhv/http -I/home/vboxuser1/DCSA/contrib/libhv/http/server -I/home/vboxuser1/DCSA/contrib/libhv/http/client
 
 CXX_FLAGS = -std=gnu++11
 

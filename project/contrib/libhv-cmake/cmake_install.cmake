@@ -1,4 +1,4 @@
-# Install script for directory: /home/vboxuser1/DCSA/libhv-http/contrib/libhv-cmake
+# Install script for directory: /home/vboxuser1/DCSA/contrib/libhv-cmake
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -44,7 +44,7 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("/home/vboxuser1/DCSA/libhv-http/project/contrib/libhv/cmake_install.cmake")
+  include("/home/vboxuser1/DCSA/project/contrib/libhv/cmake_install.cmake")
 
 endif()
 

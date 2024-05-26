@@ -1,12 +1,12 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/http-server.dir/src/HTTPServer.cpp.o"
-  "CMakeFiles/http-server.dir/src/HTTPServer.cpp.o.d"
-  "CMakeFiles/http-server.dir/src/Routers.cpp.o"
-  "CMakeFiles/http-server.dir/src/Routers.cpp.o.d"
+  "CMakeFiles/http-server.dir/src/HTTPServer/HTTPServer.cpp.o"
+  "CMakeFiles/http-server.dir/src/HTTPServer/HTTPServer.cpp.o.d"
+  "CMakeFiles/http-server.dir/src/HTTPServer/Routers.cpp.o"
+  "CMakeFiles/http-server.dir/src/HTTPServer/Routers.cpp.o.d"
+  "CMakeFiles/http-server.dir/src/HTTPServer/servermain.cpp.o"
+  "CMakeFiles/http-server.dir/src/HTTPServer/servermain.cpp.o.d"
   "CMakeFiles/http-server.dir/src/Utility/Utility.cpp.o"
   "CMakeFiles/http-server.dir/src/Utility/Utility.cpp.o.d"
-  "CMakeFiles/http-server.dir/src/main.cpp.o"
-  "CMakeFiles/http-server.dir/src/main.cpp.o.d"
   "http-server"
   "http-server.pdb"
 )

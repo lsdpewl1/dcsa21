@@ -1,13 +1,12 @@
 contrib/libhv/CMakeFiles/hv_static.dir/event/evport.c.o: \
- /home/vboxuser1/DCSA/libhv-http/contrib/libhv/event/evport.c \
+ /home/vboxuser1/DCSA/contrib/libhv/event/evport.c \
  /usr/include/stdc-predef.h \
- /home/vboxuser1/DCSA/libhv-http/contrib/libhv/event/iowatcher.h \
- /home/vboxuser1/DCSA/libhv-http/contrib/libhv/event/hloop.h \
- /home/vboxuser1/DCSA/libhv-http/contrib/libhv/./hexport.h \
- /home/vboxuser1/DCSA/libhv-http/contrib/libhv/base/hplatform.h \
- /home/vboxuser1/DCSA/libhv-http/contrib/libhv/./hconfig.h \
- /usr/include/unistd.h /usr/include/features.h \
- /usr/include/features-time64.h \
+ /home/vboxuser1/DCSA/contrib/libhv/event/iowatcher.h \
+ /home/vboxuser1/DCSA/contrib/libhv/event/hloop.h \
+ /home/vboxuser1/DCSA/contrib/libhv/./hexport.h \
+ /home/vboxuser1/DCSA/contrib/libhv/base/hplatform.h \
+ /home/vboxuser1/DCSA/contrib/libhv/./hconfig.h /usr/include/unistd.h \
+ /usr/include/features.h /usr/include/features-time64.h \
  /usr/include/x86_64-linux-gnu/bits/wordsize.h \
  /usr/include/x86_64-linux-gnu/bits/timesize.h \
  /usr/include/x86_64-linux-gnu/sys/cdefs.h \
@@ -156,6 +155,6 @@ contrib/libhv/CMakeFiles/hv_static.dir/event/evport.c.o: \
  /usr/include/x86_64-linux-gnu/bits/cpu-set.h \
  /usr/include/x86_64-linux-gnu/bits/setjmp.h \
  /usr/include/x86_64-linux-gnu/bits/types/struct___jmp_buf_tag.h \
- /home/vboxuser1/DCSA/libhv-http/contrib/libhv/base/hdef.h \
- /home/vboxuser1/DCSA/libhv-http/contrib/libhv/base/hplatform.h \
- /home/vboxuser1/DCSA/libhv-http/contrib/libhv/ssl/hssl.h
+ /home/vboxuser1/DCSA/contrib/libhv/base/hdef.h \
+ /home/vboxuser1/DCSA/contrib/libhv/base/hplatform.h \
+ /home/vboxuser1/DCSA/contrib/libhv/ssl/hssl.h

@@ -1,0 +1,1 @@
+/usr/bin/c++  -g -Wall -Werror -Wempty-body -Wredundant-move -O2 -rdynamic CMakeFiles/http-client-test.dir/src/HTTPClient/clientmain_test.cpp.o CMakeFiles/http-client-test.dir/src/Utility/Utility.cpp.o -o http-client-test  lib/libhv_static.a -lpthread -lm -ldl -lrt -lstdc++ /usr/lib/x86_64-linux-gnu/libgtest.a 

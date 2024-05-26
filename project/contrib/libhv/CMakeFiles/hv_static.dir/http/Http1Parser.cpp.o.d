@@ -1,10 +1,10 @@
 contrib/libhv/CMakeFiles/hv_static.dir/http/Http1Parser.cpp.o: \
- /home/vboxuser1/DCSA/libhv-http/contrib/libhv/http/Http1Parser.cpp \
+ /home/vboxuser1/DCSA/contrib/libhv/http/Http1Parser.cpp \
  /usr/include/stdc-predef.h \
- /home/vboxuser1/DCSA/libhv-http/contrib/libhv/http/Http1Parser.h \
- /home/vboxuser1/DCSA/libhv-http/contrib/libhv/http/HttpParser.h \
- /home/vboxuser1/DCSA/libhv-http/contrib/libhv/./hexport.h \
- /home/vboxuser1/DCSA/libhv-http/contrib/libhv/http/HttpMessage.h \
+ /home/vboxuser1/DCSA/contrib/libhv/http/Http1Parser.h \
+ /home/vboxuser1/DCSA/contrib/libhv/http/HttpParser.h \
+ /home/vboxuser1/DCSA/contrib/libhv/./hexport.h \
+ /home/vboxuser1/DCSA/contrib/libhv/http/HttpMessage.h \
  /usr/include/c++/11/memory /usr/include/c++/11/bits/stl_algobase.h \
  /usr/include/x86_64-linux-gnu/c++/11/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/11/bits/os_defines.h \
@@ -152,10 +152,10 @@ contrib/libhv/CMakeFiles/hv_static.dir/http/Http1Parser.cpp.o: \
  /usr/include/c++/11/bits/stl_multimap.h \
  /usr/include/c++/11/bits/erase_if.h /usr/include/c++/11/functional \
  /usr/include/c++/11/bits/std_function.h \
- /home/vboxuser1/DCSA/libhv-http/contrib/libhv/base/hbase.h \
- /home/vboxuser1/DCSA/libhv-http/contrib/libhv/base/hplatform.h \
- /home/vboxuser1/DCSA/libhv-http/contrib/libhv/./hconfig.h \
- /usr/include/unistd.h /usr/include/x86_64-linux-gnu/bits/posix_opt.h \
+ /home/vboxuser1/DCSA/contrib/libhv/base/hbase.h \
+ /home/vboxuser1/DCSA/contrib/libhv/base/hplatform.h \
+ /home/vboxuser1/DCSA/contrib/libhv/./hconfig.h /usr/include/unistd.h \
+ /usr/include/x86_64-linux-gnu/bits/posix_opt.h \
  /usr/include/x86_64-linux-gnu/bits/environments.h \
  /usr/include/x86_64-linux-gnu/bits/confname.h \
  /usr/include/x86_64-linux-gnu/bits/getopt_posix.h \
@@ -238,8 +238,8 @@ contrib/libhv/CMakeFiles/hv_static.dir/http/Http1Parser.cpp.o: \
  /usr/include/x86_64-linux-gnu/bits/fcntl.h \
  /usr/include/x86_64-linux-gnu/bits/fcntl-linux.h \
  /usr/include/linux/falloc.h \
- /home/vboxuser1/DCSA/libhv-http/contrib/libhv/base/hdef.h \
- /home/vboxuser1/DCSA/libhv-http/contrib/libhv/cpputil/hstring.h \
+ /home/vboxuser1/DCSA/contrib/libhv/base/hdef.h \
+ /home/vboxuser1/DCSA/contrib/libhv/cpputil/hstring.h \
  /usr/include/c++/11/vector /usr/include/c++/11/bits/stl_vector.h \
  /usr/include/c++/11/bits/stl_bvector.h \
  /usr/include/c++/11/bits/vector.tcc /usr/include/c++/11/iostream \
@@ -262,15 +262,15 @@ contrib/libhv/CMakeFiles/hv_static.dir/http/Http1Parser.cpp.o: \
  /usr/include/c++/11/bits/ostream.tcc /usr/include/c++/11/istream \
  /usr/include/c++/11/bits/istream.tcc /usr/include/c++/11/sstream \
  /usr/include/c++/11/bits/sstream.tcc \
- /home/vboxuser1/DCSA/libhv-http/contrib/libhv/base/hplatform.h \
- /home/vboxuser1/DCSA/libhv-http/contrib/libhv/cpputil/hmap.h \
- /home/vboxuser1/DCSA/libhv-http/contrib/libhv/cpputil/hfile.h \
- /home/vboxuser1/DCSA/libhv-http/contrib/libhv/base/hbuf.h \
- /home/vboxuser1/DCSA/libhv-http/contrib/libhv/base/hbase.h \
- /home/vboxuser1/DCSA/libhv-http/contrib/libhv/cpputil/hpath.h \
- /home/vboxuser1/DCSA/libhv-http/contrib/libhv/http/httpdef.h \
- /home/vboxuser1/DCSA/libhv-http/contrib/libhv/http/http_content.h \
- /home/vboxuser1/DCSA/libhv-http/contrib/libhv/cpputil/json.hpp \
+ /home/vboxuser1/DCSA/contrib/libhv/base/hplatform.h \
+ /home/vboxuser1/DCSA/contrib/libhv/cpputil/hmap.h \
+ /home/vboxuser1/DCSA/contrib/libhv/cpputil/hfile.h \
+ /home/vboxuser1/DCSA/contrib/libhv/base/hbuf.h \
+ /home/vboxuser1/DCSA/contrib/libhv/base/hbase.h \
+ /home/vboxuser1/DCSA/contrib/libhv/cpputil/hpath.h \
+ /home/vboxuser1/DCSA/contrib/libhv/http/httpdef.h \
+ /home/vboxuser1/DCSA/contrib/libhv/http/http_content.h \
+ /home/vboxuser1/DCSA/contrib/libhv/cpputil/json.hpp \
  /usr/include/c++/11/algorithm /usr/include/c++/11/bits/stl_algo.h \
  /usr/include/c++/11/bits/algorithmfwd.h \
  /usr/include/c++/11/bits/stl_heap.h \
@@ -293,4 +293,4 @@ contrib/libhv/CMakeFiles/hv_static.dir/http/Http1Parser.cpp.o: \
  /usr/include/c++/11/bits/mask_array.h \
  /usr/include/c++/11/bits/indirect_array.h /usr/include/c++/11/cassert \
  /usr/include/c++/11/limits /usr/include/c++/11/cstring \
- /home/vboxuser1/DCSA/libhv-http/contrib/libhv/http/http_parser.h
+ /home/vboxuser1/DCSA/contrib/libhv/http/http_parser.h

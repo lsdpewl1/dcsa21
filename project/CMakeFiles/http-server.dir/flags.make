@@ -4,7 +4,7 @@
 # compile CXX with /usr/bin/c++
 CXX_DEFINES = -DHV_STATICLIB
 
-CXX_INCLUDES = -I/home/vboxuser1/DCSA/libhv-http/src -I/home/vboxuser1/DCSA/libhv-http/src/.vscode -I/home/vboxuser1/DCSA/libhv-http/src/Utility -I/home/vboxuser1/DCSA/libhv-http/project/contrib/libhv/include/hv -I/home/vboxuser1/DCSA/libhv-http/contrib/libhv/include
+CXX_INCLUDES = -I/home/vboxuser1/DCSA/src -I/home/vboxuser1/DCSA/src/HTTPClient -I/home/vboxuser1/DCSA/src/.vscode -I/home/vboxuser1/DCSA/src/HTTPServer -I/home/vboxuser1/DCSA/src/Utility -I/home/vboxuser1/DCSA/project/contrib/libhv/include/hv -I/home/vboxuser1/DCSA/contrib/libhv/include
 
 CXX_FLAGS =  -g -Wall -Werror -Wempty-body -Wredundant-move -O2
 

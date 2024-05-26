@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/vboxuser1/DCSA/libhv-http
+CMAKE_SOURCE_DIR = /home/vboxuser1/DCSA
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/vboxuser1/DCSA/libhv-http/project
+CMAKE_BINARY_DIR = /home/vboxuser1/DCSA/project
 
 # Utility rule file for libhv_static.
 
@@ -77,10 +77,10 @@ contrib/libhv/CMakeFiles/libhv_static.dir/build: libhv_static
 .PHONY : contrib/libhv/CMakeFiles/libhv_static.dir/build
 
 contrib/libhv/CMakeFiles/libhv_static.dir/clean:
-	cd /home/vboxuser1/DCSA/libhv-http/project/contrib/libhv && $(CMAKE_COMMAND) -P CMakeFiles/libhv_static.dir/cmake_clean.cmake
+	cd /home/vboxuser1/DCSA/project/contrib/libhv && $(CMAKE_COMMAND) -P CMakeFiles/libhv_static.dir/cmake_clean.cmake
 .PHONY : contrib/libhv/CMakeFiles/libhv_static.dir/clean
 
 contrib/libhv/CMakeFiles/libhv_static.dir/depend:
-	cd /home/vboxuser1/DCSA/libhv-http/project && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/vboxuser1/DCSA/libhv-http /home/vboxuser1/DCSA/libhv-http/contrib/libhv /home/vboxuser1/DCSA/libhv-http/project /home/vboxuser1/DCSA/libhv-http/project/contrib/libhv /home/vboxuser1/DCSA/libhv-http/project/contrib/libhv/CMakeFiles/libhv_static.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/vboxuser1/DCSA/project && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/vboxuser1/DCSA /home/vboxuser1/DCSA/contrib/libhv /home/vboxuser1/DCSA/project /home/vboxuser1/DCSA/project/contrib/libhv /home/vboxuser1/DCSA/project/contrib/libhv/CMakeFiles/libhv_static.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : contrib/libhv/CMakeFiles/libhv_static.dir/depend
 

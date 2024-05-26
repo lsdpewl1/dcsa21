@@ -8,5 +8,29 @@ jobs:
       - name: Check out repository code
         uses: actions/checkout@v3    
       - run: sudo apt-get update
-      - run: sudo apt-get install g++ make cmake
+      - run: sudo apt-get install g++ make cmake wget libgtest-dev libtbb-dev
       - run: mkdir -p build && cd build && cmake .. && make
+
+      - run: cd ..
+      - run: sh create_debpkg.sh
+      - name: Upload artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: app
+          path: ./http-server-client-dcsa.deb
+      - run: cd ..
+      - name: Start server
+        run: ./build/http-server &
+      - name: Unit test
+        run: cd build && ctest
+      - run: cd ..
+      - name: Smoke test
+        run: |
+          if wget --timeout=5 --tries=1 --spider http://localhost:7777/; then
+            echo "Smoke test passed"
+          else
+            echo "Smoke test failed"
+            exit 1
+          fi
+      - name: Stop server
+        run: pkill http-server

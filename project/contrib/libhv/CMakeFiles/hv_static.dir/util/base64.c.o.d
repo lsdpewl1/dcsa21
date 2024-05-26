@@ -1,5 +1,5 @@
 contrib/libhv/CMakeFiles/hv_static.dir/util/base64.c.o: \
- /home/vboxuser1/DCSA/libhv-http/contrib/libhv/util/base64.c \
+ /home/vboxuser1/DCSA/contrib/libhv/util/base64.c \
  /usr/include/stdc-predef.h /usr/include/stdio.h \
  /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
  /usr/include/features.h /usr/include/features-time64.h \
@@ -23,5 +23,5 @@ contrib/libhv/CMakeFiles/hv_static.dir/util/base64.c.o: \
  /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
  /usr/include/x86_64-linux-gnu/bits/floatn.h \
  /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
- /home/vboxuser1/DCSA/libhv-http/contrib/libhv/util/base64.h \
- /home/vboxuser1/DCSA/libhv-http/contrib/libhv/./hexport.h
+ /home/vboxuser1/DCSA/contrib/libhv/util/base64.h \
+ /home/vboxuser1/DCSA/contrib/libhv/./hexport.h

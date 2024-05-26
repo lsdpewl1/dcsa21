@@ -1,8 +1,8 @@
 contrib/libhv/CMakeFiles/hv_static.dir/http/WebSocketParser.cpp.o: \
- /home/vboxuser1/DCSA/libhv-http/contrib/libhv/http/WebSocketParser.cpp \
+ /home/vboxuser1/DCSA/contrib/libhv/http/WebSocketParser.cpp \
  /usr/include/stdc-predef.h \
- /home/vboxuser1/DCSA/libhv-http/contrib/libhv/http/WebSocketParser.h \
- /home/vboxuser1/DCSA/libhv-http/contrib/libhv/./hexport.h \
+ /home/vboxuser1/DCSA/contrib/libhv/http/WebSocketParser.h \
+ /home/vboxuser1/DCSA/contrib/libhv/./hexport.h \
  /usr/include/c++/11/string \
  /usr/include/x86_64-linux-gnu/c++/11/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/11/bits/os_defines.h \
@@ -151,11 +151,11 @@ contrib/libhv/CMakeFiles/hv_static.dir/http/WebSocketParser.cpp.o: \
  /usr/include/c++/11/bits/atomic_lockfree_defines.h \
  /usr/include/c++/11/backward/auto_ptr.h /usr/include/c++/11/functional \
  /usr/include/c++/11/bits/std_function.h \
- /home/vboxuser1/DCSA/libhv-http/contrib/libhv/http/websocket_parser.h \
- /home/vboxuser1/DCSA/libhv-http/contrib/libhv/base/hdef.h \
- /home/vboxuser1/DCSA/libhv-http/contrib/libhv/base/hplatform.h \
- /home/vboxuser1/DCSA/libhv-http/contrib/libhv/./hconfig.h \
- /usr/include/unistd.h /usr/include/x86_64-linux-gnu/bits/posix_opt.h \
+ /home/vboxuser1/DCSA/contrib/libhv/http/websocket_parser.h \
+ /home/vboxuser1/DCSA/contrib/libhv/base/hdef.h \
+ /home/vboxuser1/DCSA/contrib/libhv/base/hplatform.h \
+ /home/vboxuser1/DCSA/contrib/libhv/./hconfig.h /usr/include/unistd.h \
+ /usr/include/x86_64-linux-gnu/bits/posix_opt.h \
  /usr/include/x86_64-linux-gnu/bits/environments.h \
  /usr/include/x86_64-linux-gnu/bits/confname.h \
  /usr/include/x86_64-linux-gnu/bits/getopt_posix.h \

@@ -1,7 +1,7 @@
 contrib/libhv/CMakeFiles/hv_static.dir/http/multipart_parser.c.o: \
- /home/vboxuser1/DCSA/libhv-http/contrib/libhv/http/multipart_parser.c \
+ /home/vboxuser1/DCSA/contrib/libhv/http/multipart_parser.c \
  /usr/include/stdc-predef.h \
- /home/vboxuser1/DCSA/libhv-http/contrib/libhv/http/multipart_parser.h \
+ /home/vboxuser1/DCSA/contrib/libhv/http/multipart_parser.h \
  /usr/include/stdlib.h \
  /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
  /usr/include/features.h /usr/include/features-time64.h \

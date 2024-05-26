@@ -1,9 +1,8 @@
 contrib/libhv/CMakeFiles/hv_static.dir/http/httpdef.c.o: \
- /home/vboxuser1/DCSA/libhv-http/contrib/libhv/http/httpdef.c \
+ /home/vboxuser1/DCSA/contrib/libhv/http/httpdef.c \
  /usr/include/stdc-predef.h \
- /home/vboxuser1/DCSA/libhv-http/contrib/libhv/http/httpdef.h \
- /home/vboxuser1/DCSA/libhv-http/contrib/libhv/./hexport.h \
- /usr/include/string.h \
+ /home/vboxuser1/DCSA/contrib/libhv/http/httpdef.h \
+ /home/vboxuser1/DCSA/contrib/libhv/./hexport.h /usr/include/string.h \
  /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
  /usr/include/features.h /usr/include/features-time64.h \
  /usr/include/x86_64-linux-gnu/bits/wordsize.h \

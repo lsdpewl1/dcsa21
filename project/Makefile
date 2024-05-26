@@ -57,13 +57,23 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/vboxuser1/DCSA/libhv-http
+CMAKE_SOURCE_DIR = /home/vboxuser1/DCSA
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/vboxuser1/DCSA/libhv-http/project
+CMAKE_BINARY_DIR = /home/vboxuser1/DCSA/project
 
 #=============================================================================
 # Targets provided globally by CMake.
+
+# Special rule for the target test
+test:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running tests..."
+	/usr/bin/ctest --force-new-ctest-process $(ARGS)
+.PHONY : test
+
+# Special rule for the target test
+test/fast: test
+.PHONY : test/fast
 
 # Special rule for the target edit_cache
 edit_cache:
@@ -132,9 +142,9 @@ install/strip/fast: preinstall/fast
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/vboxuser1/DCSA/libhv-http/project/CMakeFiles /home/vboxuser1/DCSA/libhv-http/project//CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/vboxuser1/DCSA/project/CMakeFiles /home/vboxuser1/DCSA/project//CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/vboxuser1/DCSA/libhv-http/project/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/vboxuser1/DCSA/project/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -175,6 +185,32 @@ http-server/fast:
 .PHONY : http-server/fast
 
 #=============================================================================
+# Target rules for targets named http-client
+
+# Build rule for target.
+http-client: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 http-client
+.PHONY : http-client
+
+# fast build rule for target.
+http-client/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/http-client.dir/build.make CMakeFiles/http-client.dir/build
+.PHONY : http-client/fast
+
+#=============================================================================
+# Target rules for targets named http-client-test
+
+# Build rule for target.
+http-client-test: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 http-client-test
+.PHONY : http-client-test
+
+# fast build rule for target.
+http-client-test/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/http-client-test.dir/build.make CMakeFiles/http-client-test.dir/build
+.PHONY : http-client-test/fast
+
+#=============================================================================
 # Target rules for targets named hv_static
 
 # Build rule for target.
@@ -200,53 +236,173 @@ libhv_static/fast:
 	$(MAKE) $(MAKESILENT) -f contrib/libhv/CMakeFiles/libhv_static.dir/build.make contrib/libhv/CMakeFiles/libhv_static.dir/build
 .PHONY : libhv_static/fast
 
-src/HTTPServer.o: src/HTTPServer.cpp.o
-.PHONY : src/HTTPServer.o
+src/HTTPClient/HTTPServer.o: src/HTTPClient/HTTPServer.cpp.o
+.PHONY : src/HTTPClient/HTTPServer.o
 
 # target to build an object file
-src/HTTPServer.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/http-server.dir/build.make CMakeFiles/http-server.dir/src/HTTPServer.cpp.o
-.PHONY : src/HTTPServer.cpp.o
+src/HTTPClient/HTTPServer.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/http-client.dir/build.make CMakeFiles/http-client.dir/src/HTTPClient/HTTPServer.cpp.o
+.PHONY : src/HTTPClient/HTTPServer.cpp.o
 
-src/HTTPServer.i: src/HTTPServer.cpp.i
-.PHONY : src/HTTPServer.i
+src/HTTPClient/HTTPServer.i: src/HTTPClient/HTTPServer.cpp.i
+.PHONY : src/HTTPClient/HTTPServer.i
 
 # target to preprocess a source file
-src/HTTPServer.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/http-server.dir/build.make CMakeFiles/http-server.dir/src/HTTPServer.cpp.i
-.PHONY : src/HTTPServer.cpp.i
+src/HTTPClient/HTTPServer.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/http-client.dir/build.make CMakeFiles/http-client.dir/src/HTTPClient/HTTPServer.cpp.i
+.PHONY : src/HTTPClient/HTTPServer.cpp.i
 
-src/HTTPServer.s: src/HTTPServer.cpp.s
-.PHONY : src/HTTPServer.s
+src/HTTPClient/HTTPServer.s: src/HTTPClient/HTTPServer.cpp.s
+.PHONY : src/HTTPClient/HTTPServer.s
 
 # target to generate assembly for a file
-src/HTTPServer.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/http-server.dir/build.make CMakeFiles/http-server.dir/src/HTTPServer.cpp.s
-.PHONY : src/HTTPServer.cpp.s
+src/HTTPClient/HTTPServer.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/http-client.dir/build.make CMakeFiles/http-client.dir/src/HTTPClient/HTTPServer.cpp.s
+.PHONY : src/HTTPClient/HTTPServer.cpp.s
 
-src/Routers.o: src/Routers.cpp.o
-.PHONY : src/Routers.o
+src/HTTPClient/Routers.o: src/HTTPClient/Routers.cpp.o
+.PHONY : src/HTTPClient/Routers.o
 
 # target to build an object file
-src/Routers.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/http-server.dir/build.make CMakeFiles/http-server.dir/src/Routers.cpp.o
-.PHONY : src/Routers.cpp.o
+src/HTTPClient/Routers.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/http-client.dir/build.make CMakeFiles/http-client.dir/src/HTTPClient/Routers.cpp.o
+.PHONY : src/HTTPClient/Routers.cpp.o
 
-src/Routers.i: src/Routers.cpp.i
-.PHONY : src/Routers.i
+src/HTTPClient/Routers.i: src/HTTPClient/Routers.cpp.i
+.PHONY : src/HTTPClient/Routers.i
 
 # target to preprocess a source file
-src/Routers.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/http-server.dir/build.make CMakeFiles/http-server.dir/src/Routers.cpp.i
-.PHONY : src/Routers.cpp.i
+src/HTTPClient/Routers.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/http-client.dir/build.make CMakeFiles/http-client.dir/src/HTTPClient/Routers.cpp.i
+.PHONY : src/HTTPClient/Routers.cpp.i
 
-src/Routers.s: src/Routers.cpp.s
-.PHONY : src/Routers.s
+src/HTTPClient/Routers.s: src/HTTPClient/Routers.cpp.s
+.PHONY : src/HTTPClient/Routers.s
 
 # target to generate assembly for a file
-src/Routers.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/http-server.dir/build.make CMakeFiles/http-server.dir/src/Routers.cpp.s
-.PHONY : src/Routers.cpp.s
+src/HTTPClient/Routers.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/http-client.dir/build.make CMakeFiles/http-client.dir/src/HTTPClient/Routers.cpp.s
+.PHONY : src/HTTPClient/Routers.cpp.s
+
+src/HTTPClient/clientmain.o: src/HTTPClient/clientmain.cpp.o
+.PHONY : src/HTTPClient/clientmain.o
+
+# target to build an object file
+src/HTTPClient/clientmain.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/http-client.dir/build.make CMakeFiles/http-client.dir/src/HTTPClient/clientmain.cpp.o
+.PHONY : src/HTTPClient/clientmain.cpp.o
+
+src/HTTPClient/clientmain.i: src/HTTPClient/clientmain.cpp.i
+.PHONY : src/HTTPClient/clientmain.i
+
+# target to preprocess a source file
+src/HTTPClient/clientmain.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/http-client.dir/build.make CMakeFiles/http-client.dir/src/HTTPClient/clientmain.cpp.i
+.PHONY : src/HTTPClient/clientmain.cpp.i
+
+src/HTTPClient/clientmain.s: src/HTTPClient/clientmain.cpp.s
+.PHONY : src/HTTPClient/clientmain.s
+
+# target to generate assembly for a file
+src/HTTPClient/clientmain.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/http-client.dir/build.make CMakeFiles/http-client.dir/src/HTTPClient/clientmain.cpp.s
+.PHONY : src/HTTPClient/clientmain.cpp.s
+
+src/HTTPClient/clientmain_test.o: src/HTTPClient/clientmain_test.cpp.o
+.PHONY : src/HTTPClient/clientmain_test.o
+
+# target to build an object file
+src/HTTPClient/clientmain_test.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/http-client-test.dir/build.make CMakeFiles/http-client-test.dir/src/HTTPClient/clientmain_test.cpp.o
+.PHONY : src/HTTPClient/clientmain_test.cpp.o
+
+src/HTTPClient/clientmain_test.i: src/HTTPClient/clientmain_test.cpp.i
+.PHONY : src/HTTPClient/clientmain_test.i
+
+# target to preprocess a source file
+src/HTTPClient/clientmain_test.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/http-client-test.dir/build.make CMakeFiles/http-client-test.dir/src/HTTPClient/clientmain_test.cpp.i
+.PHONY : src/HTTPClient/clientmain_test.cpp.i
+
+src/HTTPClient/clientmain_test.s: src/HTTPClient/clientmain_test.cpp.s
+.PHONY : src/HTTPClient/clientmain_test.s
+
+# target to generate assembly for a file
+src/HTTPClient/clientmain_test.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/http-client-test.dir/build.make CMakeFiles/http-client-test.dir/src/HTTPClient/clientmain_test.cpp.s
+.PHONY : src/HTTPClient/clientmain_test.cpp.s
+
+src/HTTPServer/HTTPServer.o: src/HTTPServer/HTTPServer.cpp.o
+.PHONY : src/HTTPServer/HTTPServer.o
+
+# target to build an object file
+src/HTTPServer/HTTPServer.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/http-server.dir/build.make CMakeFiles/http-server.dir/src/HTTPServer/HTTPServer.cpp.o
+.PHONY : src/HTTPServer/HTTPServer.cpp.o
+
+src/HTTPServer/HTTPServer.i: src/HTTPServer/HTTPServer.cpp.i
+.PHONY : src/HTTPServer/HTTPServer.i
+
+# target to preprocess a source file
+src/HTTPServer/HTTPServer.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/http-server.dir/build.make CMakeFiles/http-server.dir/src/HTTPServer/HTTPServer.cpp.i
+.PHONY : src/HTTPServer/HTTPServer.cpp.i
+
+src/HTTPServer/HTTPServer.s: src/HTTPServer/HTTPServer.cpp.s
+.PHONY : src/HTTPServer/HTTPServer.s
+
+# target to generate assembly for a file
+src/HTTPServer/HTTPServer.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/http-server.dir/build.make CMakeFiles/http-server.dir/src/HTTPServer/HTTPServer.cpp.s
+.PHONY : src/HTTPServer/HTTPServer.cpp.s
+
+src/HTTPServer/Routers.o: src/HTTPServer/Routers.cpp.o
+.PHONY : src/HTTPServer/Routers.o
+
+# target to build an object file
+src/HTTPServer/Routers.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/http-server.dir/build.make CMakeFiles/http-server.dir/src/HTTPServer/Routers.cpp.o
+.PHONY : src/HTTPServer/Routers.cpp.o
+
+src/HTTPServer/Routers.i: src/HTTPServer/Routers.cpp.i
+.PHONY : src/HTTPServer/Routers.i
+
+# target to preprocess a source file
+src/HTTPServer/Routers.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/http-server.dir/build.make CMakeFiles/http-server.dir/src/HTTPServer/Routers.cpp.i
+.PHONY : src/HTTPServer/Routers.cpp.i
+
+src/HTTPServer/Routers.s: src/HTTPServer/Routers.cpp.s
+.PHONY : src/HTTPServer/Routers.s
+
+# target to generate assembly for a file
+src/HTTPServer/Routers.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/http-server.dir/build.make CMakeFiles/http-server.dir/src/HTTPServer/Routers.cpp.s
+.PHONY : src/HTTPServer/Routers.cpp.s
+
+src/HTTPServer/servermain.o: src/HTTPServer/servermain.cpp.o
+.PHONY : src/HTTPServer/servermain.o
+
+# target to build an object file
+src/HTTPServer/servermain.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/http-server.dir/build.make CMakeFiles/http-server.dir/src/HTTPServer/servermain.cpp.o
+.PHONY : src/HTTPServer/servermain.cpp.o
+
+src/HTTPServer/servermain.i: src/HTTPServer/servermain.cpp.i
+.PHONY : src/HTTPServer/servermain.i
+
+# target to preprocess a source file
+src/HTTPServer/servermain.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/http-server.dir/build.make CMakeFiles/http-server.dir/src/HTTPServer/servermain.cpp.i
+.PHONY : src/HTTPServer/servermain.cpp.i
+
+src/HTTPServer/servermain.s: src/HTTPServer/servermain.cpp.s
+.PHONY : src/HTTPServer/servermain.s
+
+# target to generate assembly for a file
+src/HTTPServer/servermain.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/http-server.dir/build.make CMakeFiles/http-server.dir/src/HTTPServer/servermain.cpp.s
+.PHONY : src/HTTPServer/servermain.cpp.s
 
 src/Utility/Utility.o: src/Utility/Utility.cpp.o
 .PHONY : src/Utility/Utility.o
@@ -254,6 +410,8 @@ src/Utility/Utility.o: src/Utility/Utility.cpp.o
 # target to build an object file
 src/Utility/Utility.cpp.o:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/http-server.dir/build.make CMakeFiles/http-server.dir/src/Utility/Utility.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/http-client.dir/build.make CMakeFiles/http-client.dir/src/Utility/Utility.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/http-client-test.dir/build.make CMakeFiles/http-client-test.dir/src/Utility/Utility.cpp.o
 .PHONY : src/Utility/Utility.cpp.o
 
 src/Utility/Utility.i: src/Utility/Utility.cpp.i
@@ -262,6 +420,8 @@ src/Utility/Utility.i: src/Utility/Utility.cpp.i
 # target to preprocess a source file
 src/Utility/Utility.cpp.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/http-server.dir/build.make CMakeFiles/http-server.dir/src/Utility/Utility.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/http-client.dir/build.make CMakeFiles/http-client.dir/src/Utility/Utility.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/http-client-test.dir/build.make CMakeFiles/http-client-test.dir/src/Utility/Utility.cpp.i
 .PHONY : src/Utility/Utility.cpp.i
 
 src/Utility/Utility.s: src/Utility/Utility.cpp.s
@@ -270,31 +430,9 @@ src/Utility/Utility.s: src/Utility/Utility.cpp.s
 # target to generate assembly for a file
 src/Utility/Utility.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/http-server.dir/build.make CMakeFiles/http-server.dir/src/Utility/Utility.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/http-client.dir/build.make CMakeFiles/http-client.dir/src/Utility/Utility.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/http-client-test.dir/build.make CMakeFiles/http-client-test.dir/src/Utility/Utility.cpp.s
 .PHONY : src/Utility/Utility.cpp.s
-
-src/main.o: src/main.cpp.o
-.PHONY : src/main.o
-
-# target to build an object file
-src/main.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/http-server.dir/build.make CMakeFiles/http-server.dir/src/main.cpp.o
-.PHONY : src/main.cpp.o
-
-src/main.i: src/main.cpp.i
-.PHONY : src/main.i
-
-# target to preprocess a source file
-src/main.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/http-server.dir/build.make CMakeFiles/http-server.dir/src/main.cpp.i
-.PHONY : src/main.cpp.i
-
-src/main.s: src/main.cpp.s
-.PHONY : src/main.s
-
-# target to generate assembly for a file
-src/main.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/http-server.dir/build.make CMakeFiles/http-server.dir/src/main.cpp.s
-.PHONY : src/main.cpp.s
 
 # Help Target
 help:
@@ -308,21 +446,36 @@ help:
 	@echo "... install/strip"
 	@echo "... list_install_components"
 	@echo "... rebuild_cache"
+	@echo "... test"
 	@echo "... libhv_static"
+	@echo "... http-client"
+	@echo "... http-client-test"
 	@echo "... http-server"
 	@echo "... hv_static"
-	@echo "... src/HTTPServer.o"
-	@echo "... src/HTTPServer.i"
-	@echo "... src/HTTPServer.s"
-	@echo "... src/Routers.o"
-	@echo "... src/Routers.i"
-	@echo "... src/Routers.s"
+	@echo "... src/HTTPClient/HTTPServer.o"
+	@echo "... src/HTTPClient/HTTPServer.i"
+	@echo "... src/HTTPClient/HTTPServer.s"
+	@echo "... src/HTTPClient/Routers.o"
+	@echo "... src/HTTPClient/Routers.i"
+	@echo "... src/HTTPClient/Routers.s"
+	@echo "... src/HTTPClient/clientmain.o"
+	@echo "... src/HTTPClient/clientmain.i"
+	@echo "... src/HTTPClient/clientmain.s"
+	@echo "... src/HTTPClient/clientmain_test.o"
+	@echo "... src/HTTPClient/clientmain_test.i"
+	@echo "... src/HTTPClient/clientmain_test.s"
+	@echo "... src/HTTPServer/HTTPServer.o"
+	@echo "... src/HTTPServer/HTTPServer.i"
+	@echo "... src/HTTPServer/HTTPServer.s"
+	@echo "... src/HTTPServer/Routers.o"
+	@echo "... src/HTTPServer/Routers.i"
+	@echo "... src/HTTPServer/Routers.s"
+	@echo "... src/HTTPServer/servermain.o"
+	@echo "... src/HTTPServer/servermain.i"
+	@echo "... src/HTTPServer/servermain.s"
 	@echo "... src/Utility/Utility.o"
 	@echo "... src/Utility/Utility.i"
 	@echo "... src/Utility/Utility.s"
-	@echo "... src/main.o"
-	@echo "... src/main.i"
-	@echo "... src/main.s"
 .PHONY : help
 
 

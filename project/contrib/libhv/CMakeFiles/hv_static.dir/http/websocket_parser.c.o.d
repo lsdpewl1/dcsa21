@@ -1,7 +1,7 @@
 contrib/libhv/CMakeFiles/hv_static.dir/http/websocket_parser.c.o: \
- /home/vboxuser1/DCSA/libhv-http/contrib/libhv/http/websocket_parser.c \
+ /home/vboxuser1/DCSA/contrib/libhv/http/websocket_parser.c \
  /usr/include/stdc-predef.h \
- /home/vboxuser1/DCSA/libhv-http/contrib/libhv/http/websocket_parser.h \
+ /home/vboxuser1/DCSA/contrib/libhv/http/websocket_parser.h \
  /usr/include/x86_64-linux-gnu/sys/types.h /usr/include/features.h \
  /usr/include/features-time64.h \
  /usr/include/x86_64-linux-gnu/bits/wordsize.h \

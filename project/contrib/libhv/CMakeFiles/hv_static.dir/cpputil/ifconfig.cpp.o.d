@@ -1,7 +1,7 @@
 contrib/libhv/CMakeFiles/hv_static.dir/cpputil/ifconfig.cpp.o: \
- /home/vboxuser1/DCSA/libhv-http/contrib/libhv/cpputil/ifconfig.cpp \
+ /home/vboxuser1/DCSA/contrib/libhv/cpputil/ifconfig.cpp \
  /usr/include/stdc-predef.h \
- /home/vboxuser1/DCSA/libhv-http/contrib/libhv/cpputil/ifconfig.h \
+ /home/vboxuser1/DCSA/contrib/libhv/cpputil/ifconfig.h \
  /usr/include/c++/11/vector /usr/include/c++/11/bits/stl_algobase.h \
  /usr/include/x86_64-linux-gnu/c++/11/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/11/bits/os_defines.h \
@@ -43,10 +43,10 @@ contrib/libhv/CMakeFiles/hv_static.dir/cpputil/ifconfig.cpp.o: \
  /usr/include/c++/11/bits/hash_bytes.h \
  /usr/include/c++/11/bits/range_access.h \
  /usr/include/c++/11/bits/vector.tcc \
- /home/vboxuser1/DCSA/libhv-http/contrib/libhv/./hexport.h \
- /home/vboxuser1/DCSA/libhv-http/contrib/libhv/base/hplatform.h \
- /home/vboxuser1/DCSA/libhv-http/contrib/libhv/./hconfig.h \
- /usr/include/unistd.h /usr/include/x86_64-linux-gnu/bits/posix_opt.h \
+ /home/vboxuser1/DCSA/contrib/libhv/./hexport.h \
+ /home/vboxuser1/DCSA/contrib/libhv/base/hplatform.h \
+ /home/vboxuser1/DCSA/contrib/libhv/./hconfig.h /usr/include/unistd.h \
+ /usr/include/x86_64-linux-gnu/bits/posix_opt.h \
  /usr/include/x86_64-linux-gnu/bits/environments.h \
  /usr/include/x86_64-linux-gnu/bits/types.h \
  /usr/include/x86_64-linux-gnu/bits/typesizes.h \

@@ -1,9 +1,9 @@
 contrib/libhv/CMakeFiles/hv_static.dir/http/http_parser.c.o: \
- /home/vboxuser1/DCSA/libhv-http/contrib/libhv/http/http_parser.c \
+ /home/vboxuser1/DCSA/contrib/libhv/http/http_parser.c \
  /usr/include/stdc-predef.h \
- /home/vboxuser1/DCSA/libhv-http/contrib/libhv/http/http_parser.h \
- /home/vboxuser1/DCSA/libhv-http/contrib/libhv/http/httpdef.h \
- /home/vboxuser1/DCSA/libhv-http/contrib/libhv/./hexport.h \
+ /home/vboxuser1/DCSA/contrib/libhv/http/http_parser.h \
+ /home/vboxuser1/DCSA/contrib/libhv/http/httpdef.h \
+ /home/vboxuser1/DCSA/contrib/libhv/./hexport.h \
  /usr/lib/gcc/x86_64-linux-gnu/11/include/stddef.h \
  /usr/lib/gcc/x86_64-linux-gnu/11/include/stdint.h /usr/include/stdint.h \
  /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
