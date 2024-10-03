@@ -1,0 +1,7 @@
+2024-05-27 12:20:12.305 INFO  http server listening on 0.0.0.0:7777 [HttpServer.cpp:178:http_server_run]
+2024-05-27 12:20:12.305 INFO  EventLoop started, pid=4325 tid=4325 [HttpServer.cpp:151:loop_thread]
+2024-05-27 12:20:12.305 INFO  EventLoop started, pid=4325 tid=4329 [HttpServer.cpp:151:loop_thread]
+2024-05-27 12:20:12.306 INFO  EventLoop started, pid=4325 tid=4328 [HttpServer.cpp:151:loop_thread]
+2024-05-27 12:20:12.306 INFO  EventLoop started, pid=4325 tid=4327 [HttpServer.cpp:151:loop_thread]
+2024-05-27 12:20:23.478 INFO  [4325-4329][127.0.0.1:54624][POST /user]=>[200 OK] [HttpHandler.cpp:325:onMessageComplete]
+2024-05-27 12:20:23.478 INFO  [4325-4328][127.0.0.1:54634][POST /login]=>[200 OK] [HttpHandler.cpp:325:onMessageComplete]
